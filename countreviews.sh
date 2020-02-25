@@ -1,7 +1,5 @@
 #!/bin/bash
 
-declare -A file_maps
-
 if [ -f "$1" ]
 
 then
@@ -16,7 +14,10 @@ then
 	
 	for entry in "$1"/*
 	do
-		echo $entry $(grep -c "<Author>" "$entry")
+		review_count=$(grep -c "<Author>" "$entry")
+		filename=$(echo "$entry" | sed "s|.*/||" | sed "s/\..*//")
+		echo $filename $review_count 
+
 	done | sort -rn -k2 
 
 fi
