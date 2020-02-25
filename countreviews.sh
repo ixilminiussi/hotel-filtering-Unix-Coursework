@@ -1,5 +1,7 @@
 #!/bin/bash
 
+declare -A file_maps
+
 if [ -f "$1" ]
 
 then
@@ -11,10 +13,11 @@ fi
 if [ -d "$1" ]
 
 then
+	
 	for entry in "$1"/*
 	do
-		grep -c "<Author>" "$entry"
-	done
+		echo $entry $(grep -c "<Author>" "$entry")
+	done | sort -rn -k2 
 
 fi
 
