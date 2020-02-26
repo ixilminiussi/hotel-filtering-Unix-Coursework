@@ -1,7 +1,6 @@
 #!/bin/bash
 
 if [ -f "$1" ]
-
 then
 
 	grep -c "<Author>" "$1"
@@ -9,21 +8,17 @@ then
 fi
 
 if [ -d "$1" ]
-
 then
 	
 	for entry in "$1"/*
 	do
-		review_count=$(grep -c "<Author>" "$entry")
-		filename=$(basename "$entry" .dat)
-		echo $filename $review_count 
+		echo $(basename "$entry" .dat) $(grep -c "<Author>" "$entry")
 
 	done | sort -rn -k2 
 
 fi
 
 if [ ! -f "$1" ] && [ ! -d "$1" ]
-
 then
 	echo "put file or directory as argument"
 
