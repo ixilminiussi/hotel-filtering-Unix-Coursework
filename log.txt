@@ -1,0 +1,23 @@
+commit f007e0029ffaca324d442a04333227ae42dc340c
+Author: ixil <ixil@debian.vb>
+Date:   Tue Feb 25 00:56:24 2020 +0000
+
+    improving formatting
+
+commit 51012f6a978d8aacf6007e1bcbd3fb8536c4a5f0
+Author: ixil <ixil@debian.vb>
+Date:   Tue Feb 25 00:16:23 2020 +0000
+
+    sorting hotels by review number
+
+commit c48f504fd54d82c1a93380a8a4dc6fc0956ff5d7
+Author: ixil <ixil@debian.vb>
+Date:   Mon Feb 24 21:02:41 2020 +0000
+
+    added basic directory handling
+
+commit 54dadf69a711cdba17316068fdf975f90b582a76
+Author: ixil <ixil@debian.vb>
+Date:   Mon Feb 24 20:38:57 2020 +0000
+
+    Initial commit

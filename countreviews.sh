@@ -15,7 +15,7 @@ then
 	for entry in "$1"/*
 	do
 		review_count=$(grep -c "<Author>" "$entry")
-		filename=$(echo "$entry" | sed "s|.*/||" | sed "s/\..*//")
+		filename=$(basename "$entry" .dat)
 		echo $filename $review_count 
 
 	done | sort -rn -k2 
